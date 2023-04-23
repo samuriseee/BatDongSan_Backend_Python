@@ -1,6 +1,6 @@
 tags_metadata = [
   {
-    "name": "users",
-    "description": "users endpoint"
+    "name": "Real estate",
+    "description": "Real estate endpoint"
   }
 ]

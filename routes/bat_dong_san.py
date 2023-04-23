@@ -5,6 +5,7 @@ from schemas.bat_dong_san import LoaiNhaDatBan, LoaiNhaDatChoThue, BatDongSan
 from typing import List
 from starlette.status import HTTP_204_NO_CONTENT
 from sqlalchemy import func, select
+import json
 
 from cryptography.fernet import Fernet
 
@@ -57,7 +58,6 @@ def create_new_real_estate(new_bat_dong_san: BatDongSan):
         "id_loai_ban": new_bat_dong_san.id_loai_ban,
         "id_loai_thue": new_bat_dong_san.id_loai_thue
     }
-    print(new_real_estate)
     result = conn.execute(bat_dong_san.insert().values(new_real_estate))
     return conn.execute(bat_dong_san.select().where(bat_dong_san.c.id == result.lastrowid)).first()
 

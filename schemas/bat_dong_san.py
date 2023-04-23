@@ -58,7 +58,7 @@ class BatDongSanBase(BaseModel):
     id: str
     tieu_de: Optional[str] = None
     dia_chi_cu_the: Optional[str] = None
-    gia: Optional[int] = None
+    gia: Optional[str] = None
     dien_tich: Optional[float] = None
     sdt: Optional[str] = None
     so_phong_ngu: Optional[int] = None
